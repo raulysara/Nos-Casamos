@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Nos Casamos!</title>
+
+  <!-- FUENTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&family=Mandali&display=swap" rel="stylesheet">
+
+  <!-- RESET CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <!-- BOOTSTRAP 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="estilosfinales.css">
+
+</head>
+
+<body>
+
+
+  <!-- HERO  -->
+  <section id="hero" class="hero">
+    <div class="hero-foto">
+      <img src="img/novios.jpg" alt="Sara y Raúl">
+    </div>
+
+    <!-- Mitad inferior: texto -->
+    <div class="hero-texto text-center">
+      <p class="eyebrow">¡Nos Casamos!</p>
+      <!-- nombres al revés -->
+      <h1 class="nombres">Raúl <span class="amp">&amp;</span> Sara</h1>
+      <p class="fecha">23 · Octubre · 2026</p>
+
+      <!-- Cuenta atrás — el JS al final la rellena -->
+      <div id="countdown">
+        <div class="countdown-unit"><span id="cd-dias">--</span><small>días</small></div>
+        <div class="countdown-unit"><span id="cd-horas">--</span><small>horas</small></div>
+        <div class="countdown-unit"><span id="cd-min">--</span><small>min</small></div>
+        <div class="countdown-unit"><span id="cd-seg">--</span><small>seg</small></div>
+      </div>
+    </div>
+
+  </section>
+
+ <section id="galeria">
+
+    <div id="carrusel-novios" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+
+      <!-- Imágenes -->
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="img/pexels-baarast-project-243124132-17889149.jpg" alt="" class="carousel-img">
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/pexels-baarast-project-243124132-17889156.jpg" alt="" class="carousel-img">
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/pexels-baarast-project-243124132-17889160.jpg" alt="" class="carousel-img">
+        </div>
+
+        <!-- para añadir más fotos:
+        <div class="carousel-item">
+          <img src="foto-4.jpg" alt="" class="carousel-img">
+        </div>
+        -->
+
+      </div>
+
+      <!-- Overlay oscuro para que la frase se lea bien -->
+      <div class="carousel-overlay"></div>
+
+      <!-- Frase centrada encima -->
+      <div class="carousel-frase">
+        <p>La felicidad es real</p>
+        <p class="carousel-frase-sub">Cuando se comparte</p>
+      </div>
+
+      <!-- Controles opcionales — bórralos si no los quieres -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-novios" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carrusel-novios" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+
+    </div>
+  </section>
+
+
+  <!--  DETALLES DEL DÍA  Hora, lugar, dress code, etc. grid de Bootstrap (col-md-4, etc.) -->
+  <section id="detalles" class="py-5 ">
+    <div class="container ">
+
+      <h2 class="section-title text-center mb-2">El gran día</h2>
+      <p class="text-center">
+        Os esperamos en el <a href="https://maps.app.goo.gl/tubxw8WqLr9gAsvR7" target="_blank">Hotel Cortijo Chico</a> Avda. de las Américas, s/n Alhaurín de la Torre (Málaga) - 29130
+      </p>
+      <div class="foto-lugar col-6 col-xl-1  mx-auto ">
+        <img src="../img/FOTO.jpg" alt="" class="hotel">
+      </div>
+      <div class="row text-center align-items-center gap-3 ">
+
+        <div class="col-11 col-md-2 item-detalle mx-auto">
+          <!-- icono opcional: Bootstrap Icons, SVG inline, o emoji -->
+          <div class="detalle-icono">⛪</div>
+          <h3 class="detalle-titulo">Ceremonia</h3>
+          <p class="detalle-texto">18:30h</p>
+        </div>
+
+        <div class="col-11 col-md-2 item-detalle  mx-auto">
+          <div class="detalle-icono">🥂</div>
+          <h3 class="detalle-titulo">Cóctel</h3>
+          <p class="detalle-texto">20:00h</p>
+        </div>
+
+        <div class="col-11 col-md-2 item-detalle  mx-auto">
+          <div class="detalle-icono">🍽️</div>
+          <h3 class="detalle-titulo">Banquete</h3>
+          <p class="detalle-texto">21:30h</p>
+        </div>
+ <div class="col-11 col-md-2 item-detalle  mx-auto">
+          <div class="detalle-icono">🎉</div>
+          <h3 class="detalle-titulo">Fiesta</h3>
+          <p class="detalle-texto">00:00h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONFIRMACIÓN DE ASISTENCIA (RSVP)
+       Formulario conectado a Web3Forms con access_key -->
+  <!-- RSVP -->
+<section id="rsvp" class="py-5">
+  <div class="container">
+
+    <h2 class="section-title text-center mb-2">
+      Confirma tu asistencia
+    </h2>
+
+    <p class="section-sub text-center mb-5">
+      Antes del 1 de Agosto, por favor
+    </p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-7 col-lg-6">
+
+        <form id="rsvp-form">
+
+          <!-- WEB3FORMS ACCESS KEY -->
+          <input
+            type="hidden"
+            name="access_key"
+            value="TU_ACCESS_KEY_AQUI"
+          >
+
+          <!-- ASUNTO -->
+          <input
+            type="hidden"
+            name="subject"
+            value="Nueva confirmación Bodorrio"
+          >
+
+          <!-- NOMBRE DEL FORM -->
+          <input
+            type="hidden"
+            name="from_name"
+            value="Web boda"
+          >
+
+          <!-- HONEYPOT ANTI-SPAM -->
+          <input
+            type="checkbox"
+            name="botcheck"
+            style="display:none;"
+          >
+
+          <div class="row g-3">
+
+            <!-- NOMBRE -->
+            <div class="col-6">
+              <label for="nombre" class="form-label">
+                Nombre
+              </label>
+
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="form-control"
+                required
+              >
+            </div>
+
+            <!-- APELLIDOS -->
+            <div class="col-6">
+              <label for="apellidos" class="form-label">
+                Apellidos
+              </label>
+
+              <input
+                type="text"
+                id="apellidos"
+                name="apellidos"
+                class="form-control"
+                required
+              >
+            </div>
+
+            <!-- TELEFONO -->
+            <div class="col-6">
+              <label for="telefono" class="form-label">
+                Teléfono
+              </label>
+
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                class="form-control"
+                required
+              >
+            </div>
+
+            <!-- EMAIL -->
+            <div class="col-6">
+              <label for="email" class="form-label">
+                Email
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="tu@email.com"
+                required
+              >
+            </div>
+
+            <!-- ASISTENCIA -->
+            <div class="col-12">
+              <label for="asistencia" class="form-label">
+                Asistencia
+              </label>
+
+              <select
+                id="asistencia"
+                name="asistencia"
+                class="form-select"
+                required
+              >
+                <option value="" disabled selected>
+                  Selecciona...
+                </option>
+
+                <option value="si">
+                  Sí, allí estaré
+                </option>
+
+                <option value="no">
+                  No podré asistir
+                </option>
+              </select>
+            </div>
+
+            <!-- ALERGIAS -->
+            <div class="col-12">
+              <label for="alergias" class="form-label">
+                Alergias o dieta especial
+              </label>
+
+              <input
+                type="text"
+                id="alergias"
+                name="alergias"
+                class="form-control"
+                placeholder="ninguna, vegetariano/a, celiaco/a..."
+              >
+            </div>
+
+            <!-- MENSAJE -->
+            <div class="col-12">
+              <label for="mensaje" class="form-label">
+                Mensaje
+                <span class="opcional">(opcional)</span>
+              </label>
+
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                class="form-control"
+                rows="3"
+                placeholder="Lo que quieras decirnos..."
+              ></textarea>
+            </div>
+
+            <!-- BOTON -->
+            <div class="col-12">
+              <button
+                type="submit"
+                class="btn-boda w-100"
+              >
+                Confirmar asistencia
+              </button>
+            </div>
+
+            <!-- RESULTADO -->
+            <div
+              id="form-resultado"
+              class="col-12 text-center mt-3"
+              style="display:none;"
+            ></div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- FOTOS DE LOS INVITADOS
+       QR que lleva al álbum de Google Fotos
+       o al Drive compartido para subir fotos -->
+  <section id="fotos" class="py-5">
+    <div class="container text-center">
+
+      <h2 class="section-title mb-2">Comparte tus fotos y vídeos</h2>
+      <p class="section-sub mb-5">
+        Escanea el código y sube tus momentos favoritos del día, <br> ¡Nos encantará verlos!
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+
+          <!-- Sustituye el src por tu QR generado -->
+          <img src="img/qrfotos.png" alt="QR para subir fotos" class="img-fluid qr-img mb-3">
+
+          <p class="qr-texto">o haz clic aquí abajo</p>
+
+          <!-- URL del álbum compartido de Google Fotos o carpeta Drive -->
+          <a href="https://photos.app.goo.gl/4P7U9rdFwn68mM1B7" target="_blank" rel="noopener" class="btn-boda-outline">
+            Ir al álbum
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SCRIPTS  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
+ 
+
+</body>
+</html>
